@@ -1,7 +1,7 @@
 #include<stdio.h>
 #include<string.h>
 
-long long compute_hash(char *s) {
+long long hash(char *s) {
     const int p = 31;
     const int m = 1e9 + 9;
     long long hash_value = 0;
@@ -15,9 +15,8 @@ long long compute_hash(char *s) {
 int main()
 {
     char s[1000];
-    printf("Enter the String (upper case)\n");
     scanf("%[^\n]s",s);
-    printf("Hash value: %lld",compute_hash(s));
+    printf("Hash value: %lld",hash(s));
 
     return 0;
 }
